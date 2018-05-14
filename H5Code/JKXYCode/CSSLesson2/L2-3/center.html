@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Title</title>
+    <style type="text/css">
+        #mycenter1{
+            height: 300px;
+            width: 400px;
+            background-color: #edbee0;
+            /*line-height: 300px;*/
+            /*text-align: center;*/
+            /*float: left;*/
+            /*margin-left: auto;*/
+            /*margin-right: auto;*/
+            display: table;
+            text-align: center;
+            /*方法一*/
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            margin-left: -200px;
+            margin-top: -150px;
+
+            /*!*方法二*!*/
+            /*position: absolute;*/
+            /*top: 50%;*/
+            /*left: 50%;*/
+        }
+        /*.p{*/
+            /*position: relative;*/
+            /*top: -50%;*/
+            /*left: -50%;*/
+        /*}*/
+        .inner{
+            display: table-cell;
+            vertical-align: middle;
+            background-color: aqua;
+            /*width: 500px;!*table中的cellwidth的属性是不生效的*!
+            height: 500px;*/
+        }
+        /*#mycenter2{
+            height: 300px;
+            width: 400px;
+            background-color: #5fd58b;
+            line-height: 300px;
+            text-align: center;
+            float: left;
+            margin-left: 10px;
+        }*/
+    </style>
+</head>
+<body>
+<div id="mycenter1">
+    <div class="inner">
+        <div class="p"></div>
+           <img src="https://www.baidu.com/img/bd_logo1.png?where=super" width="270" height="129"/>
+            <!-- 整个朋友圈都刷爆了，
+            大家都纷纷问对这些调控政策，我有什么看法？其实对于进一步的调控，
+            有在我们之前预测的范围之内，但是没有想到纵度上，不是横度上。不管怎么样，大家不要把政
+            策调控想复杂了，对任何一项政策的调整，说明这些地方房市还是过热，本质就是为了调节需求和供给。-->
+
+    </div>
+
+</div>
+<!--<div id="mycenter2">
+    整个朋友圈都刷爆了，
+    &lt;!&ndash;大家都纷纷问对这些调控政策，我有什么看法？其实对于进一步的调控，
+    有在我们之前预测的范围之内，但是没有想到纵度上，不是横度上。不管怎么样，大家不要把政
+    策调控想复杂了，对任何一项政策的调整，说明这些地方房市还是过热，本质就是为了调节需求和供给。&ndash;&gt;
+</div>-->
+</body>
+</html>

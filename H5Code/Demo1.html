@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <script type="text/javascript" src="demo1.js">
+
+    </script>
+
+    <link rel="stylesheet" type="text/css" href="Demo1.css" />
+
+    <script type="text/javascript">
+        window.onload = function (ev) {
+            var links = document.links;
+            for (i = 0; i<links.length; i++){
+                links[i].target="_blank";
+            }
+        }
+
+        function getNodeByLevel() {
+            var tabnode = document.getElementById("tabid");
+            var parentNode = tabnode.parentNode;
+            var nodes = tabnode.children;
+            alert(nodes[0].nodeName);
+
+            var trnodes = nodes[0].children;
+            alert(trnodes[0].nodeName);
+
+
+            var n1node = tabnode.nextSibling;
+            alert(n1node.nodeType + "..." + n1node.nodeValue);
+
+
+        }
+
+        function list(node) {
+            //alert(event.srcElement);
+            //alert(node.nodeName);
+            var dlNode = node.parentNode;
+            //alert(dlNode.nodeName);
+            with(dlNode){
+                if(className == "open"){
+                    className="close"
+                }else {
+                    className="open"
+                }
+            }
+        }
+
+
+    </script>
+
+
+
+
+</head>
+<body>
+
+    <dl>
+        <dt onclick="list(this)">新闻频道</dt>
+            <dd>娱乐信息</dd>
+            <dd>娱乐信息</dd>
+            <dd>娱乐信息</dd>
+            <dd>娱乐信息</dd>
+            <dd>娱乐信息</dd>
+    </dl>
+
+
+    <input type="button" value="演示document对象" onclick="getNodeByLevel()" />
+
+    <div>
+        这是一个div区域。
+    </div>
+    <table id="tabid">
+        <tr>
+            <td>单元格一</td>
+            <td>单元格二</td>
+        </tr>
+        <tr>
+            <td>单元格三</td>
+            <td>单元格四</td>
+        </tr>
+    </table>
+    <a href="http://www.baidu.com">baidu</a>
+
+    <span>span</span>
+
+    <a href="http://www.sina.com">sina</a>
+
+</body>
+</html>

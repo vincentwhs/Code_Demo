@@ -1,0 +1,28 @@
+table{
+    border: #e558df 1px solid;
+    width: 600px;
+    border-collapse: collapse;
+}
+
+table td, table th{
+    border: #5fd58b 1px solid;
+    padding: 5px 0px 5px 0px;
+}
+table th{
+    background-color: #edbee0;
+}
+
+.one{
+    background-color: #5fd58b;
+}
+.two{
+    background-color: #e5e880;
+}
+
+.hover{
+    background-color: magenta;
+}
+
+#click{
+    background-color: red;
+}

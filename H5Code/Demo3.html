@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <link rel="stylesheet" type="text/css" href="Demo2.css" />
+    <script type="text/javascript">
+        function trColor(){
+            var tabNode = document.getElementsByTagName("table")[0];
+
+            var trs = tabNode.rows;
+            for(var x=1; x<trs.length; x++){
+                if (x%2 == 1){
+                    trs[x].className="one";
+                }else {
+                    trs[x].className="two";
+                }
+                trs[x].onmouseover=function () {
+                    name = this.className;
+                    this.className="over";
+                }
+                trs[x].onmouseout=function () {
+                    this.className = name;
+                }
+                trs[x].onclick=function () {
+
+                    if (this.id=="click"){
+                        this.id = "";
+                    }else {
+                        this.id = "click";
+                    }
+                }
+            }
+        }
+        onload=function (){trColor(); }
+
+        var name;
+        function over(node){
+            name = node.className;
+            node.className="hover";
+        }
+        function out(node){
+            node.className=name;
+        }
+    </script>
+</head>
+<body>
+<table>
+    <tr >
+        <th>电影名称</th>
+        <th>电影介绍</th>
+        <th>主演名单</th>
+    </tr>
+    <tr>
+        <td>变形金刚</td>
+        <td>变形金刚</td>
+        <td>变形金刚</td>
+    </tr>
+    <tr>
+        <td>变形金刚</td>
+        <td>变形金刚</td>
+        <td>变形金刚</td>
+    </tr>
+    <tr>
+        <td>变形金刚</td>
+        <td>变形金刚</td>
+        <td>变形金刚</td>
+    </tr>
+    <tr>
+        <td>变形金刚</td>
+        <td>变形金刚</td>
+        <td>变形金刚</td>
+    </tr>
+    <tr>
+        <td>变形金刚</td>
+        <td>变形金刚</td>
+        <td>变形金刚</td>
+    </tr>
+</table>
+</body>
+</html>

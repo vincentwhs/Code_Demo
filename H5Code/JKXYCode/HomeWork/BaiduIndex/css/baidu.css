@@ -1,0 +1,45 @@
+body{
+    font:12px arial;
+}
+
+header{
+    overflow: hidden;
+}
+
+header nav{
+    width:422px;
+    float:right;
+}
+
+header nav a{
+    margin-left:15px;
+}
+
+.content{
+    text-align: center;
+}
+
+.content input{
+    width:380px;
+    height:32px;
+}
+.content button{
+    width:100px;
+    height:36px;
+}
+.content img{
+    width:279px;
+    height:129px;
+}
+
+footer{
+    padding-top: 300px;
+    /*overflow: hidden;*/
+}
+footer p{
+    /*padding-bottom: 300px;*/
+    /*float: bottom;*/
+}
+footer p{
+    text-align: center;
+}

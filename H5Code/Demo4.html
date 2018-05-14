@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <style type="text/css">
+        #infoid{
+            display: none;
+        }
+    </style>
+
+    <script type="text/javascript">
+        function showForm(node){
+            var infoNode = document.getElementById("infoid");
+            if(node.value == "yes"){
+                infoNode.style.display = "block";
+            }else {
+                infoNode.style.display = "none";
+            }
+        }
+    </script>
+
+</head>
+<body>
+
+    <div id="newinfoarea">
+        <div>
+            是否参与愿意接收我们提供的咨询：
+            <input type="radio" name="info" value="yes" onclick="showForm(this)"/>是
+            <input type="radio" name="info" value="no" checked="checked" onclick="showForm(this)"/>否
+        </div>
+
+        <div id="infoid">
+            <form>
+                用户名:<input type="text" name="user" /><br/>
+                邮件地址:<input type="text" name="mail" /><br/>
+                <input type="submit" value="提交个人信息"/>
+            </form>
+        </div>
+    </div>
+
+<hr/>
+
+    <div>
+        <h3>测试你的性格</h3>
+        <div>请选择:</div>
+        <input type="radio" name="fruits" value="1" />苹果<br/>
+        <input type="radio" name="fruits" value="2"/>香蕉<br/>
+        <input type="button" value="查看结果"  /><br/>
+
+        <div id="result_1">
+            您的性格很扭曲
+        </div>
+    </div>
+
+</body>
+</html>

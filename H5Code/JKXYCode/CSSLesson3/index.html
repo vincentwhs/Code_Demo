@@ -1,0 +1,105 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+        "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+    <title>双飞翼布局</title>
+    <meta http-equiv="content-type" content="text/html;charset=utf-8">
+
+    <style type="text/css">
+        *{
+            margin:0;
+            padding: 0;
+        }
+        .header{
+            background: orange;
+            height: 150px;
+        }
+        .article{
+            background: green;
+            height: 300px;
+        }
+        .footer {
+            background: yellow;
+            height: 150px;
+        }
+
+        .article{
+            /*padding-left: 150px;*/
+            /*padding-right: 100px;*/
+            overflow: hidden;
+        }
+        .article .left{
+            background: blue;
+            float: left;
+            color: white;
+            width: 150px;
+            height: 16px;
+
+            /*opacity: 0.4;*/
+            margin-left: -100%;
+
+            /*position: relative;*/
+            /*left: -150px;*/
+            margin-bottom: -9999px;
+            padding-bottom: 9999px;
+        }
+        .article .middle{
+            background: darkmagenta;
+            /*border: 1px solid black;*/
+
+            float: left;
+            width: 100%;
+        }
+        .inner{
+            margin-left: 150px;
+            margin-right: 100px;
+            background-color: green;
+            margin-bottom: -9999px;
+            padding-bottom: 9999px;
+        }
+        .article .right{
+            background: #5fd58b;
+            float: left;
+            width: 100px;
+            /*height: 16px;*/
+            margin-bottom: -9999px;
+            padding-bottom: 9999px;
+
+            margin-left: -100px;
+            /*border: 1px solid black;*/
+            /*position: relative;*/
+            /*right: -100px;*/
+        }
+
+    </style>
+
+</head>
+
+
+
+<body>
+<div class="header">
+    我是头
+</div>
+
+
+<div class="article">
+    <div class="middle">
+        <div class="inner">
+            我是中间<br>
+            我是中间<br>
+            我是中间<br>
+            我是中间<br>
+            我是中间<br>
+            我是中间<br>
+            我是中间<br>
+        </div>
+    </div>
+    <div class="left">我是左我是左我是左</div>
+    <div class="right">我是右</div>
+</div>
+
+
+<div class="footer">我是尾部 版权所有@</div>
+</body>
+</html>

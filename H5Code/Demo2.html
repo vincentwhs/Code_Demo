@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <link rel="stylesheet" type="text/css" href="Demo1.css" />
+    <script type="text/javascript">
+        function list(node) {
+            var parNode = node.parentNode;
+            var divNode = parNode.getElementsByTagName("div")[0];
+            /*with(divNode){
+                if(className == "openFri"){
+                    className="closeFri";
+                }else {
+                    className="openFri";
+                }
+            }*/
+
+            var tabNode = document.getElementsByTagName("table")[0];
+            var divNodes = tabNode.getElementsByTagName("div");
+            for (x=0; x<divNodes.length; x++){
+                if (divNodes[x] == divNode){
+                    with(divNode){
+                        if(className == "openFri"){
+                            className="closeFri";
+                        }else {
+                            className="openFri";
+                        }
+                    }
+                }else {
+                    divNodes[x].className="closeFri";
+                }
+            }
+        }
+    </script>
+</head>
+<body>
+
+    <table>
+        <tr>
+            <th>电影名称</th>
+            <th>电影介绍</th>
+            <th>主演名单</th>
+        </tr>
+        <tr>
+            <td>变形金刚</td>
+            <td>变形金刚</td>
+            <td>变形金刚</td>
+        </tr>
+        <tr>
+            <td>变形金刚</td>
+            <td>变形金刚</td>
+            <td>变形金刚</td>
+        </tr>
+        <tr>
+            <td>变形金刚</td>
+            <td>变形金刚</td>
+            <td>变形金刚</td>
+        </tr>
+        <tr>
+            <td>变形金刚</td>
+            <td>变形金刚</td>
+            <td>变形金刚</td>
+        </tr>
+        <tr>
+            <td>变形金刚</td>
+            <td>变形金刚</td>
+            <td>变形金刚</td>
+        </tr>
+    </table>
+
+
+        <table>
+            <tr>
+                <td>
+                    <a href="javascript:void(0)" onclick="list(this)"> 好友列表</a>
+                    <div>
+                        大土豆<br />
+                        大土豆<br />
+                        大土豆<br />
+                    </div>
+                </td>
+            </tr>
+            <tr>
+            <td>
+                <a href="javascript:void(0)" onclick="list(this)"> 好友列表</a>
+                <div>
+                    大土豆<br />
+                    大土豆<br />
+                    大土豆<br />
+                </div>
+            </td>
+            </tr>
+            <tr>
+            <td>
+                <a href="javascript:void(0)" onclick="list(this)"> 好友列表</a>
+                <div>
+                    大土豆<br />
+                    大土豆<br />
+                    大土豆<br />
+                </div>
+            </td>
+            </tr>
+            <tr>
+            <td>
+                <a href="javascript:void(0)" onclick="list(this)"> 好友列表</a>
+                <div>
+                    大土豆<br />
+                    大土豆<br />
+                    大土豆<br />
+                </div>
+            </td>
+            </tr>
+        </table>
+
+
+</body>
+</html>

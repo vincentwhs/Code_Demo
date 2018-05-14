@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>position</title>
+
+    <style type="text/css">
+        div {
+            height: 100px;
+            width: 100px;
+
+        }
+
+        .rel {
+            background-color: green;
+            display: inline-block;
+            /* position: relative;*/
+            position: absolute;
+            left: 50px;
+            top: 50px;
+        }
+
+        .abs {
+            background-color: blue;
+            display: inline-block;
+            float: left;
+        }
+        .outer{
+            width: 300px;
+            height: 300px;
+            position: relative;
+            background-color: #edbee0;
+            display: inline-block;
+            float: left;
+        }
+        .fixed{
+            width: 100px;
+            height: 100px;
+            background-color: red;
+            right: 0px;
+            position: fixed;
+        }
+    </style>
+</head>
+<body>
+
+<div class="fixed">
+</div>
+
+<br/><br/><br/><br/><br/><br/><br/><br/><br/>
+<br/><br/><br/><br/><br/><br/><br/><br/><br/>
+<br/><br/><br/><br/><br/><br/><br/><br/><br/>
+
+<div class="outer">
+    <div class="rel"></div>
+</div>
+<div class="abs"></div>
+</body>
+</html>

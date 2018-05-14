@@ -1,0 +1,11 @@
+table{
+    border:1px solid black;
+}
+.tb-head{
+    text-align: center;
+    padding-left: 50px;
+    padding-right: 50px;
+    /*margin-left: 50px;*/
+    /*margin-right: 50px;*/
+    background-color: red;
+}
