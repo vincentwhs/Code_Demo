@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.intent.MainActivity"
+    android:orientation="vertical">
+
+   <LinearLayout
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content">
+
+       <Button
+           android:id="@+id/btn_intent"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:text="Intent"
+           android:textAllCaps="false"
+           android:onClick="myclick"></Button>
+       <Button
+           android:id="@+id/btn_test_life_cycle"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:text="lifecycle"
+           android:textAllCaps="false"
+           android:onClick="myclick"></Button>
+   </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <Button
+        android:id="@+id/btn_test_ctrl_listview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="listview"
+        android:textAllCaps="false"
+        android:onClick="myclick"></Button>
+        <Button
+            android:id="@+id/btn_test_ctrl_recyclerview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="recyclerview"
+            android:textAllCaps="false"
+            android:onClick="myclick"></Button>
+        <Button
+            android:id="@+id/btn_test_ctrl_recyclerview_chat"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="chatUi"
+            android:textAllCaps="false"
+            android:onClick="myclick"></Button>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <Button
+            android:id="@+id/btn_fragment_1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="simfagment"
+            android:onClick="myclick"/>
+
+        <Button
+            android:id="@+id/btn_fragment_2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="News"
+            android:onClick="myclick"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <Button
+            android:id="@+id/btn_broadcast_1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="broadcast1"
+            android:onClick="myclick"/>
+        <Button
+            android:id="@+id/btn_broadcast_2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="broadcast2"
+            android:onClick="myclick"/>
+        <Button
+            android:id="@+id/btn_broadcast_offline"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="broadcastoffline"
+            android:onClick="myclick"/>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <Button
+            android:id="@+id/btn_stream_file_1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="fileop"
+            android:onClick="myclick"/>
+    </LinearLayout>
+
+
+</LinearLayout>
