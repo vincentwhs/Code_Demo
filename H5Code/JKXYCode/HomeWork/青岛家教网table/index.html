@@ -19,32 +19,213 @@
                 </div>
             </td>
         </tr>
-        <tr ><td rowspan="3" class="td_rightalign">*真实姓名</td>
+        <tr><td rowspan="3" class="td_rightalign">*真实姓名</td>
             <td rowspan="3">
                 <input type="text" name="usernmae" >
                 <p style="margin: 0;padding: 0;">注意：姓名应与身份证完全一致，本网站将对你的姓名严格保密，只显示您的姓，如“张教员”。
                     此部分将在认证时严格审查，一经填写不得修改，与证件不符者将不能通过认证！</p>
             </td>
         </tr>
-        <tr><td></td>
+        <tr><td></td><td></td></tr>
+        <tr><td></td><td></td></tr>
+        <tr>
+            <td>身份证/护照</td>
+            <td><input type="text" value="">(此项将严格保密，不对外公开) </td>
+        </tr>
+        <tr>
+            <td>*性别</td>
+            <td>
+                <select id="sex">
+                    <option value="">请选择...</option>
+                    <option value="nan">男</option>
+                    <option value="nv">女</option>
+                </select>
+            </td>
+        </tr>
+        <tr><td>*出生年份</td>
+            <td>
+                <select id="birthday">
+                    <option value="选择 年">选择 年</option>
+                </select>
+            </td>
+        </tr>
+        <tr>
+            <td>*专业</td>
+            <td>
+                <input id="zhuanye" type="text" value="">请如实填写专业全名，以学生证为准。此部分将在认证时严格审查，与证件不符者将不能通过认证！
+            </td>
+        </tr>
+        <tr>
+            <td>*目前（最高）学历</td>
+            <td>
+                <select id="degree">
+                    <option value="">请选择</option>
+                    <option value="dzyx">大专以下</option>
+                    <option value="dz">大专</option>
+                    <option value="bk">本科</option>
+                    <option value="yjs">研究生</option>
+                    <option value="bs">博士</option>
+                </select>
+            </td>
+        </tr>
+        <tr>
+            <td>*目前身份</td>
+            <td>
+                <select>
+                    <option>请选择...</option>
+                </select>
+                请及时更新自己的身份，暑假期间注册，请选择下一学期的身份
+            </td>
+        </tr>
+        <tr>
+            <td>*籍贯（生源地）</td>
+            <td>
+                <select>
+                    <option>请选择...</option>
+                </select>
+                （并非指当前所在地）
+            </td>
+        </tr>
+        <tr>
+            <td>*毕业/就读高校</td>
+            <td>
+                <select>
+                    <option>请选择...</option>
+                </select>
+                若列表中无选项，请在文本框中填写
+                <input type="text" value="">
+            </td>
+        </tr>
+        <tr>
+            <td>*高中母校</td>
+            <td><input type="text" value="" >请填全称（省份、市、中学名称，如果是省市重点中学请注明） </td>
+        </tr>
+        <tr><td colspan="2">联系方式</td></tr>
+        <tr>
+            <td>*手机/小灵通</td>
+            <td>
+                <input type="text" value="">最好留下多个联系方式，换号时请及时更新联系方式
+            </td>
+        </tr>
+        <tr>
+            <td>*目前住所</td>
+            <td>
+                <select>
+                <option>请选择...</option>
+                </select>
+                选择离您的住所最近的地点
+            </td>
+        </tr>
+        <tr>
+            <td>家庭或校外住所</td>
+            <td>
+                <select>
+                    <option>请选择...</option>
+                </select>
+                请家在青岛市区或住在校外的教员填写
+            </td>
+        </tr>
+        <tr>
+            <td>*Email</td>
+            <td>
+                <input type="text" value="">(为通知合适您的家教及找回密码，请认真填写)
+            </td>
+        </tr>
+        <tr>
+            <td>QQ</td>
+            <td>
+                <input type="text" value="">
+            </td>
+        </tr>
+        <tr>
+            <td>详细地址</td>
+            <td>
+                <input type="text" value="">(以方便我们给您寄送家教相关资料及协议等。)
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2">家 教 信 息</td>
+        </tr>
+        <tr>
+            <td>*普通话</td>
+            <td>
+                <select>
+                    <option>请选择...</option>
+                </select>
+            </td>
+        </tr>
+        <tr>
+            <td>*第一外语</td>
+            <td>
+                <select>
+                    <option>英语</option>
+                </select>
+                <select>
+                    <option>一般</option>
+                </select>
+            </td>
+        </tr>
+        <tr>
+            <td>第二外语</td>
+            <td>
+                <select>
+                    <option>英语</option>
+                </select>
+                <select>
+                    <option>一般</option>
+                </select>
+            </td>
+        </tr>
+        <tr>
+            <td>*自我描述与特长展示</td>
+            <td>
+                <textarea rows="5" cols="80"></textarea>
+                全面展示你的实力和优势特长，增加你简历的含金量！例如：在比赛中得过什么重要奖项，获得过什么奖学金，取得什么样的高考成绩，有哪些能证明你能力的资格证书之类。 不得少于50字，不得超过500字。家长选择你的重要依据，请认真填写！
+            </td>
+        </tr>
+        <tr>
+            <td>家教经历（教学成果）</td>
+            <td>
+                <textarea rows="5" cols="80"></textarea>
+                这些内容是对您教学水平最有力和最直接的反映！是学员选择您的一项重要依据。字数500字以内。最好说明辅导时间、学生年级、辅导效果。可参考以下形式：2008年10月-12月，市南区初三学生英语，期终考试从全班第30名上升至第10名，英语从60分提升到80分。
+            </td>
+        </tr>
+        <tr>
             <td></td>
+            <td>
+
+            </td>
         </tr>
-        <tr><td></td><td></td></tr>
-        <tr><td>身份证/护照</td>
-            <td><input type="text" name="idcard"> </td>
+        <tr>
+            <td></td>
+            <td>
+
+            </td>
         </tr>
-        <tr><td></td><td></td></tr>
-        <tr><td></td><td></td></tr>
-        <tr><td></td><td></td></tr>
-        <tr><td></td><td></td></tr>
-        <tr><td></td><td></td></tr>
-        <tr><td></td><td></td></tr>
-        <tr><td></td><td></td></tr>
-        <tr><td></td><td></td></tr>
-        <tr><td></td><td></td></tr>
-        <tr><td></td><td></td></tr>
-        <tr><td></td><td></td></tr>
-        <tr><td></td><td></td></tr>
+        <tr>
+            <td></td>
+            <td>
+
+            </td>
+        </tr>
+        <tr>
+            <td></td>
+            <td>
+
+            </td>
+        </tr>
+        <tr>
+            <td></td>
+            <td>
+
+            </td>
+        </tr>
+        <tr>
+            <td></td>
+            <td>
+
+            </td>
+        </tr>
         <tr><td></td><td></td></tr>
         <tr><td></td><td></td></tr>
         <tr><td></td><td></td></tr>
