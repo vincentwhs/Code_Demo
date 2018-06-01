@@ -1,0 +1,19 @@
+[ERROR][2018/05/31 17:42:23747][cn.demo.log4j.Log4jDemo01.test1(Log4jDemo01.java:28)]
+this is an error
+ [FATAL][2018/05/31 17:42:23751][cn.demo.log4j.Log4jDemo01.test1(Log4jDemo01.java:29)]
+this is a fatal
+ [INFO ][2018/05/31 17:42:23753][cn.demo.log4j.Log4jDemo01.test_SimpleLayout_FileAppender(Log4jDemo01.java:51)]
+info
+ [WARN ][2018/05/31 17:42:23753][cn.demo.log4j.Log4jDemo01.test_SimpleLayout_FileAppender(Log4jDemo01.java:52)]
+warn
+ [ERROR][2018/05/31 17:42:23753][cn.demo.log4j.Log4jDemo01.test_SimpleLayout_FileAppender(Log4jDemo01.java:53)]
+error
+ [FATAL][2018/05/31 17:42:23754][cn.demo.log4j.Log4jDemo01.test_SimpleLayout_FileAppender(Log4jDemo01.java:54)]
+fatal
+ [ERROR][2018/05/31 17:42:23756][cn.demo.log4j.Log4jDemo01.test_property(Log4jDemo01.java:64)]
+ error 
+ [DEBUG][2018/05/31 17:43:49958][cn.demo.log4j.Log4jDemo01.test_property(Log4jDemo01.java:63)]
+ debug 
+ [ERROR][2018/05/31 17:43:49960][cn.demo.log4j.Log4jDemo01.test_property(Log4jDemo01.java:64)]
+ error 
+ 
