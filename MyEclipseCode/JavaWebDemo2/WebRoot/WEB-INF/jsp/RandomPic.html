@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>RandomPic.html</title>
+	
+    <meta name="keywords" content="keyword1,keyword2,keyword3">
+    <meta name="description" content="this is my page">
+    <meta name="content-type" content="text/html; charset=gb2312">
+    
+    <!--<link rel="stylesheet" type="text/css" href="./styles.css">-->
+    
+    <script type="text/javascript">
+    	function changeImg(img){
+    		img.src = img.src + "?" + new Date().getTime();
+    	}
+    </script>
+    
+    <style type="text/css">
+    	img{
+    		cursor: pointer;
+    	}
+    </style>
+
+  </head>
+  
+  <body>
+    This is my HTML page. <br>
+    
+    <form action="get">
+    
+    	验证码：<input type="text" name="checkcode" />
+    	<img src="/JavaWebDemo/ResponseDemo" alt="换一张" onclick="changeImg(this)" 
+    	/>
+    </form>
+  </body>
+</html>
