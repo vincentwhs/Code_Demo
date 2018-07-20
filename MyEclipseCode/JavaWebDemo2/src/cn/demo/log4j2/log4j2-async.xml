@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 设置log4j2的自身log级别为warn -->
+<!-- OFF > FATAL > ERROR > WARN > INFO > DEBUG > TRACE > ALL -->
+<!-- 异步写日志 -->
+<!-- log4j2支持自动重新配置,如果配置了monitorInterval，那么log4j2每隔一段时间就会检查一遍这个文件是否修改。最小是5s -->
+<Configuration status="WARN" monitorInterval="300">  
+    <properties>  
+        <property name="LOG_HOME">D:/logs</property>  
+        <property name="FILE_NAME">mylog</property>  
+    </properties>  
+  
+    <Appenders>  
+        <Console name="Console" target="SYSTEM_OUT">  
+            <PatternLayout pattern="%d{HH:mm:ss.SSS} [%t] %-5level %logger{36} - %msg%n" />  
+        </Console>  
+        <RollingRandomAccessFile name="MyFile"  
+            fileName="${LOG_HOME}/${FILE_NAME}.log"  
+            filePattern="${LOG_HOME}/$${date:yyyy-MM}/${FILE_NAME}-%d{yyyy-MM-dd HH-mm}-%i.log">  
+            <PatternLayout  
+                pattern="%date{yyyy-MM-dd HH:mm:ss.SSS} %level [%thread][%file:%line] - %msg%n" />  
+            <Policies>  
+                <TimeBasedTriggeringPolicy interval="1" />  
+                <SizeBasedTriggeringPolicy size="10 MB" />  
+            </Policies>  
+            <DefaultRolloverStrategy max="20" />  
+        </RollingRandomAccessFile>  
+        <Async name="Async">  
+            <AppenderRef ref="MyFile" />  
+        </Async>  
+    </Appenders>  
+  
+    <Loggers>  
+        <Logger name="asynclog" level="trace" additivity="false" >  
+            <AppenderRef ref="Async" />  
+        </Logger>  
+        <Root level="error">  
+            <AppenderRef ref="Console" />  
+        </Root>  
+    </Loggers>  
+</Configuration>  

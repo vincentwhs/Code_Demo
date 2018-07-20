@@ -1,0 +1,36 @@
+Log4j 2简介
+
+Log4j的1.x版本已经被广泛使用于很多应用程序中。然而，它这些年的发展已经放缓。它变得越来越难以维护，因为它需要严格遵循很老的Java版本，并在2015年8月寿终正寝。
+它的替代品，SLF4J和Logback对框架做了很多必要的改进。
+那么为什么还要费心去做Log4j 2呢？几个原因如下：
+Log4j 2被设计为可以作为审计框架使用。Log4j 1.x和Logback都会在重新配置的时候失去事件，而Log4j2不会。在Logback中，Appender当中的异常对应用从来都是不可见的。
+但Log4j2的Appender可以设置为允许将异常渗透给应用程序。
+Log4j 2包含基于LMAX Disruptor库的下一代异步日志器。在多线程情况下，异步日志器具有比Log4j 1.x和Logback高出10倍的吞吐性能以及更低的延迟。
+Log4j 2在稳定记录状态下，对单机应用是无垃圾的，对Web应用是低垃圾的。这不仅降低了垃圾回收器的压力，还可以提供更好的响应性能。
+Log4j 2使用插件系统使得它非常容易通过新的Appender、Filter、Layout、Lookup和Pattern Converter来扩展框架，且不需要对Log4j做任何修改。
+由于插件系统的配置更简单了，配置项不需要声明类名称。
+支持自定义日志级别。自定义日志级别可以在代码或配置中定义。
+支持Lambda表达式。运行在Java 8上的客户端代码可以使用Lambda表达式来实现仅在对应的日志级别启用时延迟构造日志消息。由于不需要明确地层层把关，这带来了更简洁的代码。
+支持Message对象。Message允许支持感兴趣或复杂的结构体在日志系统中传输，且可以被高效地操作。用户可以自由地创建他们自己的Message类型，并编写自定义的Layout、Filter
+和Lookup来操作它们。
+Log4j 1.x支持Appender上的Filter。Logback引入了TurboFilter来在事件被Logger处理之前对它们进行过滤。Log4j 2支持的Filter可以设置为在被Logger
+接管之前即处理事件，如同它在Logger或Appender中被处理。
+很多Logback的Appender不接受一个Layout，且只能发送固定格式的数据。而大多数Log4j 2的Appender接受Layout，允许数据以任意一种所需的格式传输。
+Log4j 1.x和Logback中的Layout返回一个String。这导致了在Logback Encoder中讨论的问题。Log4j 2用更简单的方法，Layout总是返回一个字节数组。
+优点是这意味着它们可以用于任何Appender，而不仅仅是写入到OutputStream中的那些。
+Syslog Appender既支持TCP也支持UDP，同样支持BSD系统日志以及RFC 5424格式。
+Log4j 2利用了Java 5的并发优势，并在尽可能最低的程度上进行锁定。Log4j 1.x中已知存在死锁问题。其中很多已经在Logback中修复，但很多Logback的class文件仍然需要
+在更高的编译级别中同步。
+这是一个被所有ASF项目集体支持使用的Apache软件基金会项目。如果你想要贡献或修改，只要参照贡献中的方法。
+
+
+应用程序要使用Log4j 2的API，需要从LogManager中获取一个有明确名称的Logger。
+
+LogManager将会定位到一个合适的LoggerContext并且从中获取Logger。
+
+如果Logger必须被创建，那么它会和包含这些信息的LogConfig相关联： 
+a）与Logger相同的名称； 
+b）父包的名称； 
+c）根LoggerConfig。LoggerConfig对象根据配置中的Logger声明而创建。
+
+LoggerConfig与实际处理LogEvent事件的Appender关联。

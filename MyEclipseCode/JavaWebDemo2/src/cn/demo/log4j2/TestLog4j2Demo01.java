@@ -46,5 +46,18 @@ public class TestLog4j2Demo01 {
 	    logger.error("61 error level");  
 	    logger.fatal("61 fatal level");  
 	}
+	
+	public void test_log4j2_filter(){
+		//配置文件是log4j-filter.xml(测试时需要更改配置文件名称及位置)
+		//1. 按日志级别区分文件输出
+		//按日志信息级别输出到不同名称的文件中，如info.log，error.log，warn.log等，在log4j2中可通过配置Filters来实现。
+		    Logger logger = LogManager.getLogger(TestLog4j2Demo01.class);  
+		    logger.trace("trace level");  
+		    logger.debug("debug level");  
+		    logger.info("info level");  
+		    logger.warn("warn level");  
+		    logger.error("error level");  
+		    logger.fatal("fatal level");  
+	}
 
 }

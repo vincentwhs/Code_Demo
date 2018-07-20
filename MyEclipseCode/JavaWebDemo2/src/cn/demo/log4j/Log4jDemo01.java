@@ -19,9 +19,9 @@ public class Log4jDemo01 {
 		Logger logger = Logger.getLogger(Log4jDemo01.class);  
         
         //使用默认的配置信息，不需要写log4j.properties  
-        BasicConfigurator.configure();  
+        //BasicConfigurator.configure();  
         //设置日志输出级别为info，这将覆盖配置文件中设置的级别  
-        logger.setLevel(Level.ERROR);  
+        //logger.setLevel(Level.ERROR);  
         //下面的消息将被输出  
         logger.info("this is an info");  
         logger.warn("this is a warn");  
@@ -58,7 +58,7 @@ public class Log4jDemo01 {
 	
 	@Test
 	public void test_property(){
-		PropertyConfigurator.configure( " D:/Code/conf/log4j.properties" );
+		PropertyConfigurator.configure("conf/log4j.properties");
         Logger logger  =  Logger.getLogger(Log4jDemo01.class );
         logger.debug( " debug " );
         logger.error( " error " );
